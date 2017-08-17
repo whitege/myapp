@@ -2,8 +2,8 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      股票信息管理
-      <small>进行股票信息基本增删改查</small>
+      {{pageTitle}}
+      <small>{{pageDesc}}</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -17,7 +17,8 @@
     <!--------------------------
       | Your Page Content Here |
       -------------------------->
-    <app-stock-manage></app-stock-manage>
+    <!--<app-stock-manage></app-stock-manage>-->
+    <router-outlet></router-outlet>
 
   </section>
   <!-- /.content -->
