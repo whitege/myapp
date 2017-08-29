@@ -23,7 +23,7 @@
         <th>App评级</th>
         <th>操作</th>
       </tr>
-      <tr *ngFor="let stock of stocks | stockFilter:'name':keywork;let i = index;">
+      <tr *ngFor="let stock of stocks | async | stockFilter:'name':keywork;let i = index;">
         <td>{{i+1}}</td>
         <td>{{stock.name}}</td>
         <td><img src="{{stock.logo}}" alt="" style="width:25px;height:25px"></td>
