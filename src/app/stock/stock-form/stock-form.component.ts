@@ -30,7 +30,7 @@ export class StockFormComponent implements OnInit {
     this.formModel = fb.group(
       {
         name: [this.stock.name, [Validators.required, Validators.minLength(3)]],
-        price: [this.stock.price, Validators.required],
+        price: [this.stock.logo, Validators.required],
         desc: [this.stock.desc],
         categories: fb.array([
           new FormControl(this.stock.categories.indexOf(this.categories[0]) != -1),
@@ -72,7 +72,7 @@ export class StockFormComponent implements OnInit {
     this.formModel.value.categories = chineseCategories;
     this.formModel.value.rating = this.stock.rating;
     console.log(this.formModel.value);
-    this.router.navigateByUrl('/stock');
+    // this.router.navigateByUrl('/stock');
 
   }
 }

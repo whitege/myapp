@@ -18,15 +18,15 @@
     <table class="table table-bordered">
       <tr>
         <th style="width: 10px">#</th>
-        <th>股票名称</th>
-        <th>股票价格</th>
-        <th>股票评级</th>
+        <th>App名称</th>
+        <th>Logo</th>
+        <th>App评级</th>
         <th>操作</th>
       </tr>
       <tr *ngFor="let stock of stocks | stockFilter:'name':keywork;let i = index;">
         <td>{{i+1}}</td>
         <td>{{stock.name}}</td>
-        <td>{{stock.price}}</td>
+        <td><img src="{{stock.logo}}" alt="" style="width:25px;height:25px"></td>
         <td>
           <app-stars [rating]="stock.rating"></app-stars>
         </td>
